@@ -74,12 +74,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   
 
   ------- 
-  log in page and sign -up page 
-  let's buid our login form 
-  -redirect the brose page 
-  browse the page after the authetication 
-  then create the header 
-  main movie 
+  - log in page and sign -up page 
+  - let's buid our login form 
+  - redirect the brose page 
+  - browse the page after the authetication 
+  - then create the header 
+  - main movie 
+  - we have covered routing 
+  - coviring validation 
+  - deploying our app to the production 
+  - doing validation 
+  - let's create authetication let's create sign up user creation 
+  - implementing sign -in and sign-up API 
+  - providing the redux appSTore to our application 
+  - we have implimented sign out into it \
+  - buid movies from tmd movies 
+  - 
+  
 
--Netflix-gpt 
+- Netflix-gpt 
 
