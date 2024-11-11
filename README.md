@@ -89,6 +89,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - providing the redux appSTore to our application 
   - we have implimented sign out into it \
   - buid movies from tmd movies 
+  - fix the all bugs and when the component unmount we unsbscribe the it 
+  - added hardcode thing outside the files 
+  - now working on our movie part and browse part 
   - 
   
 

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import Header from './Header';
 import { checkValidate } from '../Utils/Validation';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../Utils/fiberbase';
-import { useNavigate } from 'react-router-dom';
+import { NetflixBackground } from '../Utils/Constant';
+
 
 const Login = () => {
     const [isSignInToggling, setSignInToggling] = useState(true);
@@ -11,7 +12,7 @@ const Login = () => {
     const nameRef = useRef(null);
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
-    const navigate = useNavigate();
+    
 
     const handleToggling = () => {
         setSignInToggling(!isSignInToggling);
@@ -21,9 +22,9 @@ const Login = () => {
     const buttonHandler = async () => {
         const message = checkValidate(emailRef.current.value, passwordRef.current.value);
         setErrorMessage(message);
-
+    
         if (message) return; // Exit if there's a validation error
-
+    
         try {
             if (!isSignInToggling) {
                 // Sign-Up Logic
@@ -32,8 +33,14 @@ const Login = () => {
                     emailRef.current.value,
                     passwordRef.current.value
                 );
-                console.log("User signed up:", userCredential.user);
-                navigate("/browse"); // Redirect to browse on successful sign-up
+                alert("User signed up successfully!");
+    
+                await updateProfile(userCredential.user, {
+                    displayName: nameRef.current.value // Set displayName correctly
+                });
+    
+                 
+    
             } else {
                 // Sign-In Logic
                 const userCredential = await signInWithEmailAndPassword(
@@ -41,21 +48,22 @@ const Login = () => {
                     emailRef.current.value,
                     passwordRef.current.value
                 );
-                console.log("User signed in:", userCredential.user);
-                navigate("/browse"); // Redirect to home on successful sign-in
+                
+                
             }
         } catch (error) {
             console.error("Authentication error:", error);
             setErrorMessage(`${error.code}: ${error.message}`);
         }
     };
+    
 
     return (
         <div>
             <Header />
             <div className="absolute">
                 <img
-                    src="https://assets.nflxext.com/ffe/siteui/vlv3/151f3e1e-b2c9-4626-afcd-6b39d0b2694f/web/IN-en-20241028-TRIFECTA-perspective_bce9a321-39cb-4cce-8ba6-02dab4c72e53_large.jpg"
+                    src={NetflixBackground}
                     alt="Netflix background"
                     className="w-full h-full object-cover"
                 />
