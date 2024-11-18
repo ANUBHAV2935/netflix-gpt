@@ -9,7 +9,7 @@ const loginSlice = createSlice({
           return action.payload;
 
        },
-       RemoveUser:(state,action)=>{
+       RemoveUser:()=>{
           return null;
 
        },
