@@ -92,7 +92,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - fix the all bugs and when the component unmount we unsbscribe the it 
   - added hardcode thing outside the files 
   - now working on our movie part and browse part 
-  - 
+  - register and Tmdb api and creating 
+  - now we are calling the data 
+  - now we are just calling the api and put their data into redux store 
+  - and make the custome hook and name as useNowPlayingMovie
+  - we have create custome hook now playing movies 
+  - we updated store using movies data 
+  - we have created movie slice 
+  - we have plained for main container and second container 
+  - we have fetched data for trailler video
+  - we have updated the store 
+  - then we have embaded the youtube video and make it mute and autoplay 
+  - we include add some tailwind property and make it beautifull 
+  
   
 
 - Netflix-gpt 
