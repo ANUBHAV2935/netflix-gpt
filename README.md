@@ -104,6 +104,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - we have updated the store 
   - then we have embaded the youtube video and make it mute and autoplay 
   - we include add some tailwind property and make it beautifull 
+  - first up all we need to add a button and which is navigate to the page 
+  - adding the multilinual language 
+  - gpt search bar 
+  - gpt search pages 
+  - integrated gpt api 
+  - adding tailwind css 
+  - 
   
   
 
